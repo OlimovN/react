@@ -2,43 +2,6 @@ import React,{useState} from "react";
 import "./App.css";
 
 
-const  = () => {
-  const images = [
-    { id: 1, src:{ https://picsum.photos/id/237/200/300
-    },  },
-    { id: 2, src: {https://picsum.photos/seed/picsum/200/300
-    },  },
-    { id: 3, src:{ https://picsum.photos/200/300?grayscale
-    },  },
-    { id: 4, src: {https://picsum.photos/200/300/?blur
-    },  },
-  ];
-
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  return (
-    <div className="gallery">
-      <div className="thumbnail-container">
-        {images.map((image) => (
-          <img
-            key={image.id}
-            src={image.src}
-            alt={image.alt}
-            onClick={() => setSelectedImage(image.src)}
-            className="thumbnail"
-          />
-        ))}
-      </div>
-      {selectedImage && (
-        <div className="modal" onClick={() => setSelectedImage(null)}>
-          <span className="close">&times;</span>
-          <img className="modal-content" src={selectedImage} alt="Selected" />
-        </div>
-      )}
-    </div>
-  );
-};
-
 
 // const App = () => {
 //   const [progress, setProgress] = useState(0);
